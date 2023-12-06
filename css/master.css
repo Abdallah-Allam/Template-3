@@ -368,7 +368,7 @@ ul {
   color: var(--main-color);
 }
 .articles .container .box:hover .info i {
-  animation: move-right 0.5s linear infinite;
+  animation: arrow-right-move 0.5s linear infinite;
 }
 /* End Articles */
 /* Start Gallery */
@@ -1530,7 +1530,7 @@ ul {
     height: 100%;
   }
 }
-@keyframes move-right {
+@keyframes arrow-right-move {
   100% {
     transform: translateX(10px);
   }
