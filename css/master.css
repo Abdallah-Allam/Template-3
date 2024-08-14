@@ -33,22 +33,19 @@ ul {
   margin-right: auto;
 }
 /* Small */
-@media (min-width: 768px)
-{
+@media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 /* Medium */
-@media (min-width: 992px)
-{
+@media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 /* large */
-@media (min-width: 1200px)
-{
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
@@ -93,11 +90,12 @@ ul {
 .main-title:hover::after {
   z-index: -1;
   animation: left-move 0.5s linear forwards;
-} 
+}
 /* End Global Rules */
 /* Start Header */
 .header {
-  background-color: white; /* To make sure it will be white if we modified anything in the body */
+  background-color: white;
+  /* To make sure it will be white if we modified anything in the body */
   -webkit-box-shadow: 0 0 10px #ddd;
   -moz-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
@@ -113,7 +111,8 @@ ul {
 .header .logo {
   font-size: 25px;
   color: var(--main-color);
-  height: 73.6px; /* we put height to make sure that header will not sized by itself if we put to main-nav display none header's height will change */
+  height: 73.6px;
+  /* we put height to make sure that header will not sized by itself if we put to main-nav display none header's height will change */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +130,7 @@ ul {
     margin: auto;
   }
 }
-.header .main-nav > li > a {
+.header .main-nav>li>a {
   display: flex;
   position: relative;
   height: 73.6px;
@@ -141,16 +140,16 @@ ul {
   padding: 0 30px;
   overflow: hidden;
   transition: var(--main-tran-dur);
-  font-size: 18px;  
+  font-size: 18px;
 }
 @media (max-width: 767px) {
-  .header .main-nav > li > a {
+  .header .main-nav>li>a {
     font-size: 14px;
     padding: 10px;
     height: 40px;
   }
 }
-.header .main-nav > li > a::before {
+.header .main-nav>li>a::before {
   content: "";
   position: absolute;
   left: -100%;
@@ -160,10 +159,10 @@ ul {
   background-color: var(--main-color);
   transition: var(--main-tran-dur);
 }
-.header .main-nav > li > a:hover {
+.header .main-nav>li>a:hover {
   color: var(--main-color);
 }
-.header .main-nav > li > a:hover::before {
+.header .main-nav>li>a:hover::before {
   left: 0;
 }
 .header .mega-menu {
@@ -180,7 +179,7 @@ ul {
   top: calc(100% + 50px);
   transition: opacity var(--main-tran-dur), top var(--main-tran-dur);
 }
-.header .main-nav > li:hover .mega-menu {
+.header .main-nav>li:hover .mega-menu {
   opacity: 1;
   top: calc(100% + 1px);
   z-index: 100;
@@ -197,7 +196,7 @@ ul {
 }
 @media (max-width: 991px) {
   .header .mega-menu .image {
-    display: none ;
+    display: none;
   }
 }
 .header .mega-menu .links {
@@ -226,7 +225,7 @@ ul {
   z-index: -1;
   transition: var(--main-tran-dur);
 }
-.header .mega-menu .links li:hover:before { 
+.header .mega-menu .links li:hover:before {
   width: 100%;
 }
 .header .mega-menu .links li a {
@@ -303,7 +302,7 @@ ul {
   animation: up-and-down 5s linear infinite;
 }
 @media (max-width: 991px) {
-  .landing .container .image{
+  .landing .container .image {
     display: none;
   }
 }
@@ -312,7 +311,7 @@ ul {
   left: 50%;
   bottom: 30px;
   transform: translateX(-50%);
-  color: var(--main-color); 
+  color: var(--main-color);
 }
 .landing .go-down i {
   animation: bouncing 1.5s infinite;
@@ -601,7 +600,7 @@ ul {
 }
 .team .box {
   position: relative;
-} 
+}
 .team .box::after,
 .team .box::before {
   content: "";
@@ -761,7 +760,7 @@ ul {
   background-color: var(--main-color);
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   font-size: 30px;
   color: white;
   font-weight: bold;
@@ -830,7 +829,7 @@ ul {
   display: flex;
   align-items: center;
 }
-.how-work .container > img {
+.how-work .container>img {
   margin-right: 100px;
   max-width: 100%;
 }
@@ -838,7 +837,7 @@ ul {
   .how-work .container {
     flex-direction: column;
   }
-  .how-work .container > img {
+  .how-work .container>img {
     margin: 0 0 50px;
   }
 }
@@ -922,7 +921,7 @@ ul {
   gap: 10px;
 }
 .events .info .time .unit {
-  width: 75px;
+  width: fit-content;
   border: 2px solid #ececec;
   text-align: center;
   border-radius: 5px;
@@ -960,7 +959,7 @@ ul {
   line-height: 1.6;
   color: #777;
   font-size: 16px;
-} 
+}
 .events .subs {
   width: 100%;
   margin-top: 40px;
@@ -1107,8 +1106,8 @@ ul {
 }
 .pricing .box .price span:first-child {
   color: var(--main-color);
-    font-size: 60px;
-    font-weight: bold;
+  font-size: 60px;
+  font-weight: bold;
 }
 .pricing .box .price span:last-child {
   font-size: 15px;
@@ -1171,7 +1170,7 @@ ul {
   max-width: 100%;
 }
 @media (max-width: 991px) {
-  .videos .holder .preview img  {
+  .videos .holder .preview img {
     margin-bottom: 20px;
   }
 }
@@ -1248,7 +1247,7 @@ ul {
   text-align: center;
   position: relative;
 }
-.stat .container .box::before, 
+.stat .container .box::before,
 .stat .container .box::after {
   content: "";
   position: absolute;
@@ -1265,7 +1264,7 @@ ul {
   right: 0;
   top: 0;
 }
-.stat .container .box:hover::before, 
+.stat .container .box:hover::before,
 .stat .container .box:hover::after {
   height: 100%;
 }
@@ -1330,7 +1329,7 @@ ul {
 .discount .form .content form input:focus,
 .discount .form .content form textarea:focus {
   outline: none;
-} 
+}
 .discount .form .content form input[type="submit"] {
   background-color: var(--main-color);
   color: white;
@@ -1418,13 +1417,13 @@ ul {
   transition: var(--main-tran-dur);
 }
 .footer .social .icons a:first-child:hover {
-  background-color:#1877f2;
+  background-color: #1877f2;
 }
 .footer .social .icons a:nth-child(2):hover {
   background-color: #1da1f2;
 }
 .footer .social .icons a:last-child:hover {
-  background-color:red;
+  background-color: red;
 }
 .footer .social .icons a i {
   font-size: 26px;
@@ -1489,7 +1488,8 @@ ul {
 }
 /* End Footer */
 @keyframes up-and-down {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
   }
   50% {
@@ -1497,10 +1497,17 @@ ul {
   }
 }
 @keyframes bouncing {
-  0%, 10%, 20%, 30%, 50%, 80%, 100% {
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%, 60% {
+  40%,
+  60% {
     transform: translateY(-15px);
   }
 }
@@ -1536,7 +1543,8 @@ ul {
   }
 }
 @keyframes flashing {
-  0%, 40% {
+  0%,
+  40% {
     opacity: 1;
   }
   100% {
