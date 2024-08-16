@@ -816,6 +816,7 @@ ul {
   display: block;
   height: 100%;
   background-color: var(--main-color);
+  transition: 0.3s;
 }
 /* End Skills */
 /* Start Work */

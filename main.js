@@ -22,3 +22,43 @@ let counter = setInterval(() => {
     clearInterval(counter);
   }
 }, 1000);
+
+let skillsSec = document.querySelector(".our_skills");
+let progSpans = document.querySelectorAll(".our_skills .skill .prog span");
+let textProgSpans = document.querySelectorAll(".our_skills .skill h3 span");
+let skillStarted = false;
+
+let statsSec = document.querySelector(".stat");
+let statsSpans = document.querySelectorAll(".stat .box .number");
+let statsStarted = false;
+
+function startCount(el, data) {
+  let goal = el.dataset[data];
+  let textContentNum = parseInt(el.textContent);
+  let count = setInterval(() => {
+    isNaN(el.textContent)
+      ? (el.textContent = `${textContentNum++}%`)
+      : el.textContent++;
+    if (el.textContent === goal) {
+      clearInterval(count);
+    }
+  }, 300 / parseInt(goal));
+}
+
+window.onscroll = function () {
+  if (window.scrollY >= skillsSec.offsetTop - 300) {
+    progSpans.forEach((el) => {
+      el.style.width = el.dataset.width;
+    });
+    if (!skillStarted) {
+      textProgSpans.forEach((el) => startCount(el, "width"));
+    }
+    skillStarted = true;
+  }
+  if (window.scrollY >= statsSec.offsetTop) {
+    if (!statsStarted) {
+      statsSpans.forEach((el) => startCount(el, "goal"));
+      statsStarted = true;
+    }
+  }
+};
