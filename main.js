@@ -42,7 +42,7 @@ function startCount(el, data) {
     if (el.textContent === goal) {
       clearInterval(count);
     }
-  }, 300 / parseInt(goal));
+  }, 2000 / parseInt(goal));
 }
 
 window.onscroll = function () {
